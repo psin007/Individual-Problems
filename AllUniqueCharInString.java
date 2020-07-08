@@ -13,7 +13,7 @@ import java.util.HashMap;
  */
 public class AllUniqueCharInString {
     
-    
+    //my solution
     public boolean checkUniqueness (String s){
        HashMap<Character,Integer> hash = new HashMap<>();
        for( char c: s.toCharArray()){
@@ -27,9 +27,31 @@ public class AllUniqueCharInString {
         return true;
     }
     
+    //book solution #1
+    boolean isUniqueChars(String str){
+        
+        if(str.length() > 128){//un extended ascii string set
+            return false;
+        }
+        boolean[] char_set = new boolean[128];
+            for(int i  = 0; i < str.length(); i++){
+                int val = str.charAt(i);
+                if(char_set[val]){
+                    return false;
+                }
+                char_set[val] = true;
+            }
+        
+        return true;
+    }
+    
+    
+    
     public static void main(String args[]){
         AllUniqueCharInString obj = new AllUniqueCharInString();
-        boolean returnValue = obj.checkUniqueness("abcdefg");
+        boolean returnValue;
+        // returnValue = obj.checkUniqueness("abcdefg");
+        returnValue = obj.isUniqueChars("abcdegc");
         String result = (returnValue == true) ? "All unique":"repeating characters";
         System.out.println(result);
         
