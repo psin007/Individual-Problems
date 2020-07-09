@@ -27,10 +27,9 @@ public class StringCompression {
                     flag = false;
                 }
             }
-            if(count > 1){
-                sb.append(count);
-                count = 1;
-            }
+            
+            sb.append(count);
+            count = 1;
             flag = true;
             i++;
         }
@@ -41,7 +40,7 @@ public class StringCompression {
     
     public static void main(String args[]){
         StringCompression obj = new StringCompression();
-        String[] s = {"aabcccccaa","abc"};
+        String[] s = {"aabcccccaaa","abc"};
         for(String str: s){
             System.out.println(obj.compressedString(str));
         }
