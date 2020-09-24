@@ -1,2 +1,2 @@
 # Individual Problems
-Individual problems and their solutions - Java /  JavaScript / Python
+Individual problems and their solutions in java from Leetcode, Hackerrank and Cracking the coding Interview
