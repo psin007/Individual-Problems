@@ -37,7 +37,10 @@ public class URLify {
 				spaceCount++;
 			}
 		}
-		index = len + spaceCount * 2 - 1;
+	    //why index = len + spaceCount *2; because in between trueLength, lets say there are 2 spaces, now we need 4 extra spaces at end as 2 spaces are alreday included 
+	    //between truelength. As noticed, we need 3* extra space for every space but as seen, 1 space is already included between true length, now we need to add only 2wice for every 
+	    //spaceCount
+		index = len + spaceCount * 2 ;
 		// second loop, replace spaces from the end
 		for (int i = len - 1; i >= 0; i--) {
 			if (chars[i] == ' ') {
