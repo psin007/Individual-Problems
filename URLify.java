@@ -31,7 +31,7 @@ public class URLify {
 		}
 		int spaceCount = 0;
 		int index = 0;
-		// first loop, locate last position
+		// first loop, count empty spaces
 		for (int i = 0; i < len; i++) {
 			if (chars[i] == ' ') {
 				spaceCount++;
